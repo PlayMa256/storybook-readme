@@ -1,8 +1,8 @@
 # Storybook README addon
 
-NOTE: This README is only for version `^5.0.0`. For older versions [README_V4.md](./README_V4.md)
+This is a fork from storybook-readme which stands to fix some of the problems and maintain the project stable and reliable. I'll publish this under storybook-readme-addon.
 
-All previous api should work correctly at `^5.0.0` and above. **But vue users will need to change their import path, as vue commands have been moved to their own folder.**
+This project will follow the same license as the previous project, and all rights from the original source goes to tuchk4
 
 ---
 
@@ -32,11 +32,11 @@ Stories will be added with _.addWithInfo_ method if [Storybook Info Addon](https
 
 ## Install
 
-`npm install --save-dev storybook-readme`
+`npm install --save-dev storybook-readme-addon`
 
 or
 
-`yarn add --dev storybook-readme`
+`yarn add --dev storybook-readme-addon`
 
 #### Webpack Configuration for React Storybook
 
@@ -99,13 +99,13 @@ storiesOf('Vue <docs>', module).addParameters({
 #### Register addon at _.storybook/addons.js_
 
 ```js
-import 'storybook-readme/register';
+import 'storybook-readme-addon/register';
 ```
 
 NOTE: It is possible to set addon's panel title
 
 ```js
-import registerWithPanelTitle from 'storybook-readme/registerWithPanelTitle';
+import registerWithPanelTitle from 'storybook-readme-addon/registerWithPanelTitle';
 
 registerWithPanelTitle('Docs');
 ```
@@ -114,13 +114,13 @@ registerWithPanelTitle('Docs');
 
 ```js
 import { addDecorator, configure } from '@storybook/react';
-import { addReadme } from 'storybook-readme';
+import { addReadme } from 'storybook-readme-addon';
 
 // for Vue storybook
-import { addReadme } from 'storybook-readme/vue'; // <---- vue subpackage
+import { addReadme } from 'storybook-readme-addon/vue'; // <---- vue subpackage
 
 // for HTML storybook
-import { addReadme } from 'storybook-readme/html'; // <---- html subpackage
+import { addReadme } from 'storybook-readme-addon/html'; // <---- html subpackage
 
 addDecorator(addReadme);
 
