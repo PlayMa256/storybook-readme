@@ -14,7 +14,9 @@ export default function getParameters(context) {
     ...config,
     codeTheme,
     theme: {
-      ...(parameters.options && parameters.options.theme ? parameters.options.theme : {}),
+      ...(parameters.options && parameters.options.theme
+        ? parameters.options.theme
+        : {}),
       ...config.theme,
     },
   };
